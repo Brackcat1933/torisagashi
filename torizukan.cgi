@@ -1,9 +1,5 @@
 my @words = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
 
-print "Content-Type: text/html; charset=Shift_JIS\n\n";
-print "<html>";
-print "<head><title>サンプル</title></head>";
-print "<body>";
 
 my $cnt1 = 0;
 my $cnt2 = 0;
@@ -30,7 +26,7 @@ while ( $cnt1 < 62 ) {
                                 $trip = crypt $tripkey, $salt;
                                 $trip = substr $trip, -10;
                                 $trip = "#$words[$cnt1]$words[$cnt2]$words[$cnt3]$words[$cnt4]$words[$cnt5]$words[$cnt6]$words[$cnt7]$words[$cnt8]" . "◆"  . $trip;
-                                print "<p>" $trip, "</p>\n";
+                                print $trip, "\n";
                                 
                                 $cnt8++;
                             }
@@ -55,7 +51,4 @@ while ( $cnt1 < 62 ) {
     $cnt2 = 1;
     $cnt1++;
 }
-print "<p>長すぎワロタ</p>";
-print "</body>";
-print "</html>";
-exit;
+
