@@ -55,7 +55,7 @@ while ( $cnt1 < 62 ) {
     $cnt2 = 1;
     $cnt1++;
 }
-print "<p>初めてのCGI。</p>";
+print "<p>長すぎワロタ</p>";
 print "</body>";
 print "</html>";
 exit;
